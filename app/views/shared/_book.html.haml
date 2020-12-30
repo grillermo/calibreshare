@@ -1,0 +1,18 @@
+.firstColumn
+  %img{src: book.image_url}/
+.secondColumn
+  %h2.title
+    = book.title
+  %h3.authors
+    = book.authors_name
+  - if book.preview_url
+    = link_to(book.preview_url,target: '_blank', class: :previewLink) do
+      vista previa(pdf)
+  - if book.comments_text.present?
+    %p.comment
+      = book.comments_text.html_safe
+  =form_tag(send_book_path, method: :post) do
+    = hidden_field_tag :book_id, book.id
+    %button
+      enviar a 
+      = registered_email

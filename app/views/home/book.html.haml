@@ -1,0 +1,6 @@
+.book
+  = render partial: 'shared/book', locals: {book: @book}
+
+  %p.returnLink
+    %a{href: books_path(language: @book.language, anchor: "book#{@book.id}")}
+      < volver

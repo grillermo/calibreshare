@@ -1,0 +1,17 @@
+.sendBook
+  .container
+    %h1
+      Enviando...
+    %ol
+      %li
+        = "Libro: #{ @book.title }"
+      %li
+        = "Email: #{ registered_email }"
+    %p
+      Espera unos minutos a que aparezca en tu kindle.
+    %p
+      Amazon puede llegar a pedirte confirmar el envío en el email de tu cuenta.
+    %p
+      %a{href: books_path(language: @book.language, anchor: "book#{@book.id}")}
+        < volver
+      

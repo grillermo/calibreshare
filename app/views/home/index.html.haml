@@ -1,0 +1,31 @@
+.index
+  .container
+    %p
+      Donde comparto mi biblioteca de ebooks directo a tu kindle o email
+      %br
+    %h2
+      Instrucciones:
+    %ol.steps
+      %li.firstStep
+        %h3
+          1. Configura tu kindle para recibir documentos desde
+          =ENV['DEFAULT_EMAIL']
+          en 
+          %a{href: 'https://www.amazon.com.mx/hz/mycd/myx#/home/settings/payment', target: '_blank'}
+            "Configuración de documentos personales"
+        %img{src: 'whispernet-email.jpg'}
+
+      %li.copyKindleEmail
+        %h3
+          2. Copia el email asociado a tu kindle
+        %img{src: 'kindle-email.jpg'}
+
+      %li.emailForm
+        %h3
+          3. Péga el email aquí
+        %img{src: 'paste-here.png'}
+        %p
+          = form_tag(register_email_path, method: :post) do
+            %input{type: :email, value: registered_email, name: :email, placeholder: 'tuemail@kindle.com'}
+            %button
+              4. ir a ebooks

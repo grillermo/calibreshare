@@ -1,0 +1,29 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title
+      =ENV['APPLICATION_NAME']
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+
+    %link{:href => "https://fonts.gstatic.com", :rel => "preconnect"}/
+    %link{:href => "https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans&display=swap", :rel => "stylesheet"}/
+
+  %body
+    .header
+      %h1
+        =ENV['APPLICATION_NAME']
+      - if @languages
+        .languages
+          - @languages.each do |language|
+            - if params[:language] == language.lang_code
+              %h2.language
+                = language_in_spanish(language)
+            - else
+              %h2.language
+                %a{href: "?language=#{language.lang_code}", class: :language}
+                  = language_in_spanish(language)
+    = yield

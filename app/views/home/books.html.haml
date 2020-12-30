@@ -1,0 +1,4 @@
+%ul.books
+  - @books.each do |book|
+    %li.book{id: "book#{book.id}"}
+      = render partial: 'shared/book', locals: { book: book}

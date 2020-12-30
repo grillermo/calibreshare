@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">1</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">bfed909a-ef66-4c9e-ad04-b5637f25c9bb</dc:identifier>
+        <dc:title>The Forerunner</dc:title>
+        <dc:creator opf:file-as="Gibran, Khalil" opf:role="aut">Khalil Gibran</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (3.33.1) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2018-04-17T21:29:17+00:00</dc:date>
+        <dc:description>The second collection of poetry and short stories by Lebanese author Khalil Gibran.</dc:description>
+        <dc:publisher>Standard Ebooks</dc:publisher>
+        <dc:identifier opf:scheme="URL">https://standardebooks.org/ebooks/khalil-gibran/the-forerunner</dc:identifier>
+        <dc:language>eng</dc:language>
+        <dc:subject>Mysticism -- Poetry</dc:subject>
+        <dc:subject>Parables</dc:subject>
+        <meta content="{&quot;Khalil Gibran&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2020-12-30T20:27:06.733954+00:00" name="calibre:timestamp"/>
+        <meta content="Forerunner, The" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="cover.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>
