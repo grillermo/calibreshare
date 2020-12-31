@@ -14,14 +14,14 @@ Uses Mailgun to take the chosen file and send it to the user email.
 
 #### Requisites
 - Mailgun account, a free one will do.
-- A hosting, you can use digital ocean, but not heroku(they disallow the SQLite gem)
+- A hosting, you can use digital ocean apps, but not heroku(they disallow the SQLite gem)
 - Your calibre library on a publicly accessible hosting.
 
 #### Installation
 
 1. Clone this project.
-2. Customize the .env.example to set the corresponding vars
-3. A capfile is provide to deploy using capistrano but you need to customize the `repo_url` cap production deploy
+2. Customize the .env.example to set the corresponding vars and save as .env or set on your terminal
+3. rails s
 
 ### Thanks
 
