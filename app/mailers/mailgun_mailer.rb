@@ -26,7 +26,7 @@ class MailgunMailer < ApplicationMailer
     mb_obj.set_text_body(body)
     mb_obj.add_attachment(file.path)
 
-    response = mg_client.send_message(ENV['DEFAULT_EMAIL'], mb_obj)
+    response = mg_client.send_message(ENV['MAILGUN_DOMAIN'], mb_obj)
 
     File.delete(file.path)
     response
