@@ -45,6 +45,11 @@ class HomeController < ApplicationController
     redirect_to books_path(language: 'spa')
   end
 
+  def sources
+
+  end
+
+  private
   def send_email
     url   = @book.book_url
     name  = @book.book_file_name

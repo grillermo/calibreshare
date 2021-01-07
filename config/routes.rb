@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   get '/send_book', to: redirect('/libros')
 
   get '/clear_cache', to: 'home#clear_cache'
+  get '/fuentes', to: 'home#sources'
 end
