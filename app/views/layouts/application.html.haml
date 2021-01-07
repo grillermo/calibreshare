@@ -15,7 +15,11 @@
   %body
     .header
       %h1
-        =ENV['APPLICATION_NAME']
+        - if request.path == '/'
+          = ENV['APPLICATION_NAME']
+        - else
+          = link_to '/' do
+            = ENV['APPLICATION_NAME'].titleize
       - if @languages
         .languages
           - @languages.each do |language|
