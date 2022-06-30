@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
 
+gem 'sqlite3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '7.0.3'
 # Use Puma as the app server
@@ -11,7 +12,10 @@ gem 'puma'
 # gem 'mini_racer', platforms: :ruby
 gem "haml-rails"
 
-# gem 'calibre-ruby', require: 'calibre'
+gem 'sass-rails'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
+
+gem 'calibre-ruby', require: 'calibre', path: '/Users/grillermo/c/calibre-ruby-master'
 gem 'unicorn'
 gem 'sucker_punch'
 gem 'mailgun-ruby'
