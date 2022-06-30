@@ -1,15 +1,16 @@
 GIT
+  remote: https://github.com/grillermo/calibre-ruby.git
+  revision: 7861027f31bcd593ff39bb60b9bb1a771f7486d4
+  specs:
+    calibre-ruby (0.0.2)
+      activerecord (> 5.2.0)
+
+GIT
   remote: https://github.com/mimemagicrb/mimemagic.git
   revision: 01f92d86d15d85cfd0f20dabd025dcbd36a8a60f
   ref: 01f92d86d15d85cfd0f20dabd025dcbd36a8a60f
   specs:
     mimemagic (0.3.5)
-
-PATH
-  remote: /Users/grillermo/c/calibre-ruby-master
-  specs:
-    calibre-ruby (0.0.2)
-      activerecord (> 5.2.0)
 
 GEM
   remote: https://rubygems.org/

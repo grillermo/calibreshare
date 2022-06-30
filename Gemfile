@@ -15,7 +15,7 @@ gem "haml-rails"
 gem 'sass-rails'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 
-gem 'calibre-ruby', require: 'calibre', path: '/Users/grillermo/c/calibre-ruby-master'
+gem 'calibre-ruby', require: 'calibre', github: 'grillermo/calibre-ruby'
 gem 'unicorn'
 gem 'sucker_punch'
 gem 'mailgun-ruby'
