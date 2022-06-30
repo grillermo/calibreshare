@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
     registered_email.present?
   end
 
+  def email_registration_missing?
+    registered_email.blank?
+  end
+
   def registered_email
     session[:email]
   end

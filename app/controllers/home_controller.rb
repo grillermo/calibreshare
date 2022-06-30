@@ -5,6 +5,9 @@ class HomeController < ApplicationController
     end
   end
 
+  before_action :preregister, only: [:books, :book], if: :email_registration_missing?
+  before_action :redirect_to_register, only: [:books, :book], if: :email_registration_missing?
+
   def index
   end
 
@@ -15,14 +18,10 @@ class HomeController < ApplicationController
   end
 
   def book
-    redirect_to root_path if not email_registered?
-
     @book = Calibre::Book.find(book_params[:book_id])
   end
 
   def books
-    redirect_to root_path if not email_registered?
-
     @books = Calibre::Book.list
 
     @languages = Calibre::Language.all
@@ -50,6 +49,15 @@ class HomeController < ApplicationController
   end
 
   private
+
+  def redirect_to_register
+    redirect_to root_path
+  end
+
+  def preregister
+    session[:email] = params[:email] if params[:email].present?
+  end
+
   def send_email
     url   = @book.book_url
     name  = @book.book_file_name
