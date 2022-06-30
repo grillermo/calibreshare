@@ -7,16 +7,9 @@ ruby '2.7.2'
 gem 'rails', '~> 5.2.0'
 # Use Puma as the app server
 gem 'puma'
-# Use SCSS for stylesheets
-gem 'sass-rails'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier'
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 gem "haml-rails"
-gem 'coffee-rails'
 
 gem 'calibre-ruby', require: 'calibre'
 gem 'unicorn'
