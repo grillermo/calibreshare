@@ -39,3 +39,4 @@ yarn-debug.log*
 metadata.db
 
 .env
+.DS_STORE
