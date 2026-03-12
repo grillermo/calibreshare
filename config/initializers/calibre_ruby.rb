@@ -1,12 +1,12 @@
-require 'open-uri'
+require 'http'
 
 url = URI.join(ENV['CALIBRE_FOLDER_BASE_URL'],'metadata.db').to_s
 
 database_file_name = 'metadata.db'
 
-open(database_file_name , 'wb') do |file|
-  file << open(url).read
-end
+response = HTTP.get(url)
+
+File.binwrite(database_file_name, response.body) if response.status.success?
 
 Calibre.db = database_file_name
 
