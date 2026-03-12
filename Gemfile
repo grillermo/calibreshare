@@ -13,17 +13,16 @@ gem 'puma'
 # gem 'mini_racer', platforms: :ruby
 gem "haml-rails"
 
-gem 'sass-rails'
+gem 'dartsass-sprockets'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 gem 'calibre-ruby', require: 'calibre', github: 'grillermo/calibre-ruby'
 gem 'unicorn'
 gem 'sucker_punch'
-gem 'mailgun-ruby'
+gem 'mailgun-ruby', '~> 1.4'
 gem 'base64'
 gem 'bigdecimal'
 gem 'dotenv'
-gem 'http'
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks'

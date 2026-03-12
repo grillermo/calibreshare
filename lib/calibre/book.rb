@@ -1,3 +1,6 @@
+require 'uri'
+require 'erb'
+
 class Calibre::Book
   def self.base_url
     ENV['CALIBRE_FOLDER_BASE_URL']
@@ -20,7 +23,7 @@ class Calibre::Book
   end
 
   def self.url_for(path)
-    URI.join(base_url, URI::encode(path)).to_s
+    URI.join(base_url, ERB::Util.url_encode(path)).to_s
   end
 
   def image_url

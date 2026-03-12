@@ -60,4 +60,6 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.serve_static_assets = true
+
+  config.hosts << ENV['ALLOWED_HOSTS']
 end
