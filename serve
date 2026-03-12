@@ -1,0 +1,2 @@
+bundle install
+rails start -p 3011
