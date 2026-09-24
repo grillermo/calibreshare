@@ -1,2 +1,5 @@
+# Set here rather than inherited from ~/.zshrc, so the app boots in production
+# no matter which shell (or tmux pane) runs this script.
+export RAILS_ENV=production
 bundle install
 rails s -p 3011
