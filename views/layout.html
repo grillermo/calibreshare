@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{.AppName}}</title>
+<link rel="stylesheet" href="/application.css">
+<link href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+<h1>{{if .IsRoot}}{{.AppName}}{{else}}<a href="/">{{titleize .AppName}}</a>{{end}}</h1>
+{{- if .Languages}}
+<div class="languages">
+{{- range .Languages}}
+{{- if eq $.Language .Code}}
+<h2 class="language">{{languageName .Code}}</h2>
+{{- else}}
+<h2 class="language"><a href="?language={{.Code}}" class="language">{{languageName .Code}}</a></h2>
+{{- end}}
+{{- end}}
+</div>
+{{- end}}
+</div>
+{{template "content" .}}
+</body>
+</html>

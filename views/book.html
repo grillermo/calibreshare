@@ -1,0 +1,6 @@
+{{define "content"}}
+<div class="book">
+{{template "book" .}}
+<p class="returnLink"><a href="/libros?language={{.Book.Language}}#book{{.Book.ID}}">&lt; volver</a></p>
+</div>
+{{end}}
