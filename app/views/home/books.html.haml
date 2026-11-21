@@ -1,9 +1,0 @@
-%ul.books
-  - @books.each do |book|
-    %li.book{id: "book#{book.id}"}
-      = render partial: 'shared/book', locals: { book: book}
-
-%p
-  tienes curiosidad de dónde saco mis libros, checa la página de
-  = link_to :fuentes do
-    fuentes
