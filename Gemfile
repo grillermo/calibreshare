@@ -1,7 +1,7 @@
 source "https://rubygems.org", cooldown: 7
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.4.7'
+ruby '4.0.10'
 
 gem 'sqlite3', '~> 1.7'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -50,11 +50,24 @@ group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara'
   gem 'selenium-webdriver'
-  # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
+
+# Rails 7.0 requires these, but Ruby 3.4+/4.0 no longer ship them as default gems.
+gem "base64"
+gem "benchmark"
+gem "bigdecimal"
+gem "cgi"
+gem "drb"
+gem "logger"
+gem "mutex_m"
+gem "observer"
+gem "ostruct"
+gem "tsort"
+
+# Rails 7.0 does not support minitest 6.
+gem "minitest", "~> 5.25", group: :test
