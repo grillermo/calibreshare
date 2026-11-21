@@ -1,0 +1,74 @@
+/* Compiled by hand from the old app/assets/stylesheets (reset.scss + application.scss). */
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 | License: none (public domain) */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+:root {
+  --body-color: #073b4c;
+  --accent-color: #ef476f;
+  --background-color: #f4f1de;
+}
+
+body { color: var(--body-color); font-family: 'Alegreya Sans', serif; }
+h1, h2, h3 { font-family: 'Alegreya', serif; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.3rem; }
+p { font-size: 1.1rem; }
+a { color: var(--accent-color); }
+
+button {
+  margin-top: 20px;
+  letter-spacing: .01em;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  user-select: none;
+  box-sizing: border-box;
+  padding: .5em 1em;
+  background-color: var(--background-color);
+  text-decoration: none;
+  border-radius: 2px;
+  color: var(--body-color);
+  border: 2px dashed var(--body-color);
+}
+
+.header { background: var(--background-color); margin-bottom: 20px; padding: 10px; }
+.header h1 { margin-left: 10px; margin-top: 20px; }
+.header .languages { text-align: center; }
+.header .languages .language { display: inline; margin: 0 2px; }
+
+.index { line-height: 50px; padding: 20px; }
+.index .container { position: relative; }
+.index .steps li { margin: 20px 0; }
+.index .firstStep img { margin: 10px; }
+.index .emailForm form { margin: 10px 0; }
+.index .emailForm input { display: block; width: 297px; height: 30px; padding: .5em 1em; }
+
+.books { padding: 0 20px; }
+
+.book {
+  list-style-type: none;
+  padding: 20px;
+  background: var(--background-color);
+  width: calc(100% - 40px);
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 260px calc(100% - 300px);
+}
+.book h2, .book h3 { margin-bottom: 20px; }
+.book img { width: 240px; float: left; margin-right: 10px; }
+.book li span { padding: 10px; }
+.book .returnLink { margin: 10px 0; }
+.book p { margin: 10px 0px; }
+.book .previewLink { font-size: 0.9rem; }
+.book .comment { margin-top: 20px; }
+
+.sendBook { line-height: 50px; padding: 20px; }
+.sendBook ol { padding: 0 20px; }

@@ -1,5 +1,7 @@
-# Set here rather than inherited from ~/.zshrc, so the app boots in production
-# no matter which shell (or tmux pane) runs this script.
-export RAILS_ENV=production
-bundle install
-rails s -p 3011
+#!/bin/sh
+# Builds and runs the Go server on the port the old Rails app used.
+# The binary is named "ebooks" so it shows up under that name in ps/top.
+set -e
+cd "$(dirname "$0")"
+go build -trimpath -ldflags='-s -w' -o ebooks .
+PORT=3011 exec ./ebooks

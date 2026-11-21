@@ -1,0 +1,8 @@
+{{define "content"}}
+<ul class="books">
+{{- range .Books}}
+<li class="book" id="book{{.ID}}">{{template "book" (withBook $ .)}}</li>
+{{- end}}
+</ul>
+<p>tienes curiosidad de dónde saco mis libros, checa la página de <a href="/fuentes">fuentes</a></p>
+{{end}}

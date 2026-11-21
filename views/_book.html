@@ -1,0 +1,19 @@
+{{define "book"}}
+<div class="firstColumn">
+<img src="{{.Book.ImageURL}}">
+</div>
+<div class="secondColumn">
+<h2 class="title">{{.Book.Title}}</h2>
+<h3 class="authors">{{.Book.AuthorsName}}</h3>
+{{- with .Book.PreviewURL}}
+<a href="{{.}}" target="_blank" class="previewLink">vista previa(pdf)</a>
+{{- end}}
+{{- with .Book.CommentsText}}
+<p class="comment">{{safe .}}</p>
+{{- end}}
+<form action="/send_book" method="post">
+<input type="hidden" name="book_id" value="{{.Book.ID}}">
+<button>enviar a {{.Email}}</button>
+</form>
+</div>
+{{end}}

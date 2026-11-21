@@ -1,0 +1,14 @@
+{{define "content"}}
+<div class="sendBook">
+<div class="container">
+<h1>Enviando...</h1>
+<ol>
+<li>Libro: {{.Book.Title}}</li>
+<li>Email: {{.Email}}</li>
+</ol>
+<p>Espera unos minutos a que aparezca en tu kindle.</p>
+<p>Amazon puede llegar a pedirte confirmar el envío en el email de tu cuenta.</p>
+<p><a href="/libros?language={{.Book.Language}}#book{{.Book.ID}}">&lt; volver</a></p>
+</div>
+</div>
+{{end}}
